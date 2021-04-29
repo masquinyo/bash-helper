@@ -1,0 +1,8 @@
+[user]
+	name = Emmanuel Toledo
+	email = myEmail@email.com
+[alias]
+	new = !git checkout -b
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	upstream = !git push --set-upstream origin $(git branch-name)
+	pull-master = !git checkout master && git pull && git status
