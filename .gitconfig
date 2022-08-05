@@ -1,5 +1,5 @@
 [user]
-	name = Emmanuel Toledo
+	name = user
 	email = myEmail@email.com
 [alias]
 	new = !git checkout -b
