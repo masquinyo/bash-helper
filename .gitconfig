@@ -6,3 +6,4 @@
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	upstream = !git push --set-upstream origin $(git branch-name)
 	pull-master = !git checkout master && git pull && git status
+	del-branch-gone = "!git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
