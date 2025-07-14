@@ -2,7 +2,14 @@
 	name = user
 	email = myEmail@email.com
 [alias]
-	new = !git checkout -b
+	new = !git switch -c
+	new-feat = "!f() { git switch -c \"feature/$@\"; }; f"
+	new-bug = "!f() { git switch -c \"bug/$@\"; }; f"
+	new-chore = "!f() { git switch -c \"chore/$@\"; }; f"
+	new-docs = "!f() { git switch -c \"docs/$@\"; }; f"
+	new-refactor = "!f() { git switch -c \"refactor/$@\"; }; f"
+	new-style = "!f() { git switch -c \"style/$@\"; }; f"
+	new-test = "!f() { git switch -c \"test/$@\"; }; f"
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	upstream = !git push --set-upstream origin $(git branch-name)
 	pull-master = !git checkout master && git pull && git status
